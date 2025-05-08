@@ -366,18 +366,25 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="co">#&gt; File type is 81x.</span></span>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co">#&gt; Unnesting the data...</span></span>
 <span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="co">#&gt; Formatting datetime column...</span></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; Looking for start and end of each measurement...</span></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>ch4_dry <span class="ot">&lt;-</span> <span class="fu">licoread_to_fluxible</span>(</span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>  gas_df_82z,</span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="st">&quot;LI-7810_CH4_DRY&quot;</span>,</span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>  <span class="at">datetime_col =</span> <span class="fu">c</span>(<span class="st">&quot;LI-8250_DATE&quot;</span>, <span class="st">&quot;LI-8250_TIME&quot;</span>)</span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>)</span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="co">#&gt; File type is 82z.</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="co">#&gt; Unnesting the data...</span></span>
-<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="co">#&gt; Selecting the focus gas...</span></span>
-<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="co">#&gt; Formatting datetime column...</span></span>
-<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="co">#&gt; Looking for start and end of each measurement...</span></span></code></pre></div>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="co">#&gt; Looking for start and end of each measurement...</span></span></code></pre></div>
+<p>With the 82z file type, the name of measured gases is not so
+intuitive. You can use the <code>list_gases()</code> function to list
+all the gases present in the dataset.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">list_gases</span>(gas_df_82z)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; File type is 82z.</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; [1] &quot;LI-7810_CH4_DRY&quot; &quot;LI-7810_CO2_DRY&quot; &quot;LI-7820_N2O_DRY&quot; &quot;LI-7825_CO2&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>ch4_dry <span class="ot">&lt;-</span> <span class="fu">licoread_to_fluxible</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  gas_df_82z,</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>  <span class="st">&quot;LI-7810_CH4_DRY&quot;</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>  <span class="at">datetime_col =</span> <span class="fu">c</span>(<span class="st">&quot;LI-8250_DATE&quot;</span>, <span class="st">&quot;LI-8250_TIME&quot;</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>)</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">#&gt; File type is 82z.</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">#&gt; Unnesting the data...</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">#&gt; Selecting the focus gas...</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">#&gt; Formatting datetime column...</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">#&gt; Looking for start and end of each measurement...</span></span></code></pre></div>
 </div>
 
 

@@ -16,7 +16,7 @@ data <- licoread(path)
 path <- system.file("extdata/mixed_files", package = "licoread")
 gas_df_82z <- licoread(path, file_type = "82z")
 
-## ----fluxible-----------------------------------------------------------------
+## ----fluxible-81x-------------------------------------------------------------
 path_81x <- system.file("extdata/81x", package = "licoread")
 gas_df_81x <- licoread(path_81x)
 
@@ -25,6 +25,10 @@ co2_df <- licoread_to_fluxible(
   "CO2",
   datetime_col = "Date"
 )
+
+## ----fluxible-82z-------------------------------------------------------------
+
+list_gases(gas_df_82z)
 
 ch4_dry <- licoread_to_fluxible(
   gas_df_82z,
